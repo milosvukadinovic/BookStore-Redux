@@ -1,14 +1,22 @@
+/* eslint-disable no-shadow */
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/destructuring-assignment */
 import React from 'react';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import { removeBook } from '../actions/RemoveBook';
 import Book from '../components/Book';
 
-const BooksList = (props) => {
-  const { books } = props;
-  const booky = books.map((book) => (
+const BooksList = props => {
+  const {
+    removeBook,
+  } = props;
+
+  const booky = props.books.map((book) => (
     <Book
       key={book.id}
       book={book}
+      handleBookRemove={removeBook}
     />
   ));
 
@@ -30,11 +38,21 @@ const BooksList = (props) => {
   );
 };
 
-const mapStateToProps = (state) => ({
+
+const mapStateToProps = (state, ownProps) => ({
   books: state.books,
 });
+
 BooksList.propTypes = {
-  books: PropTypes.instanceOf(Object).isRequired,
+  removeBook: PropTypes.func.isRequired,
+  books: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number,
+      title: PropTypes.string,
+      category: PropTypes.string,
+    }),
+  ).isRequired,
 };
 
-export default connect(mapStateToProps)(BooksList);
+
+export default connect(mapStateToProps, { removeBook })(BooksList);
