@@ -5,12 +5,14 @@ import { Provider } from 'react-redux';
 import rootReducer from './reducers';
 import App from './containers/App';
 
+const createID = () => Math.floor((Math.random() * 1000) + 1);
+
 const INITIAL_STATE = {
   books: [
-    { id: Math.floor((Math.random() * 1000) + 1), title: 'Stone Age', category: 'History' },
-    { id: Math.floor((Math.random() * 1000) + 1), title: 'Last Note', category: 'Romance' },
-    { id: Math.floor((Math.random() * 1000) + 1), title: 'Australien', category: 'Sci-fi' },
-    { id: Math.floor((Math.random() * 1000) + 1), title: 'Young Grandad', category: 'Comedy' },
+    { id: createID(), title: 'Stone Age', category: 'History' },
+    { id: createID(), title: 'Last Note', category: 'Romance' },
+    { id: createID(), title: 'Australien', category: 'Sci-fi' },
+    { id: createID(), title: 'Young Grandad', category: 'Comedy' },
   ],
 };
 
