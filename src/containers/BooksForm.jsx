@@ -39,18 +39,18 @@ class BooksForm extends React.Component {
       this.setState({
         error: null,
       });
-    }
-    event.preventDefault();
+      event.preventDefault();
 
-    this.props.createBook({
-      id: createID(),
-      title,
-      category,
-    });
-    this.setState({
-      title: '',
-      category: 'Action',
-    });
+      this.props.createBook({
+        id: createID(),
+        title,
+        category,
+      });
+      this.setState({
+        title: '',
+        category: 'Action',
+      });
+    }
   }
 
   render() {
