@@ -2,7 +2,8 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../style/book.css'
+import '../style/book.css';
+
 const Book = props => {
   const { book } = props;
 
