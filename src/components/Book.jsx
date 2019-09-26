@@ -2,19 +2,19 @@
 /* eslint-disable react/destructuring-assignment */
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../style/book.css';
 
 const Book = props => {
   const { book } = props;
 
   return (
-    <tr>
-      <td>{book.id}</td>
-      <td>{book.title}</td>
-      <td>{book.category}</td>
-      <td>
-        <button type="submit" onClick={() => props.handleBookRemove(book)}>Remove Book</button>
-      </td>
-    </tr>
+    <div className="panel">
+      <div className="bookBox">
+        <h2>{book.title}</h2>
+        <h5>{book.category}</h5>
+        <div className="meta"><button type="button" onClick={() => props.handleBookRemove(book)}>Remove Book</button></div>
+      </div>
+    </div>
   );
 };
 
