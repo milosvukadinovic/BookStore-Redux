@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable jsx-a11y/interactive-supports-focus */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable react/no-this-in-sfc */
 /* eslint-disable react/destructuring-assignment */
@@ -9,6 +11,7 @@ import '../style/book.css';
 
 const Book = props => {
   const { book } = props;
+  const x = number();
   return (
     <div className="bookContainer row">
       <div className="FirstColumn column">
@@ -20,7 +23,7 @@ const Book = props => {
         <br />
         <div className="bottomText">
           <span className="bookComment">Comment</span>
-          <a className="bookRemove" role="link" onClick={() => props.handleBookRemove(book)}>Remove</a>
+          <a className="bookRemove" role="link" style={{ cursor: 'pointer' }} onClick={() => props.handleBookRemove(book)}>Remove</a>
           <span className="bookEdit">Edit</span>
         </div>
       </div>
@@ -29,22 +32,22 @@ const Book = props => {
           <div className="circle-image" />
           <div className="percentageInfo">
             <span className="bookPercentage">
-          {number().percentage}
-          %
-          </span>
-          <br />
-          <span className="bookCompleted">Completed</span>
+              {x.percentage}
+              %
+            </span>
+            <br />
+            <span className="bookCompleted">Completed</span>
           </div>
-          
+
         </div>
-        
+
       </div>
       <div className="ThirdColumn column">
         <span className="bookCurrent">Current Chapter:</span>
         <br />
         <span className="bookChapter">
         Chapter
-          {number().chapter}
+          {x.chapter}
         </span>
         <br />
         <button type="button" className="bookUpdate">UPDATE PROGRESS</button>

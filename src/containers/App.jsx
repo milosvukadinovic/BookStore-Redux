@@ -10,7 +10,7 @@ const App = () => (
         <span className="logo">Bookstore CMS</span>
         <span className="spanB">BOOKS</span>
         <span className="spanC">CATEGORIES</span>
-        <div className="profilePic"></div>
+        <div className="profilePic" />
       </div>
       <div className="container-Body">
         <BooksList />
