@@ -4,13 +4,18 @@ import BooksList from './BooksList';
 import BooksForm from './BooksForm';
 
 const App = () => (
-  <div className="App">
-    <div className="App-header">
-      <div className="logo">Bookstore</div>
-      <div className="span">Books: </div>
-      <BooksList />
-      <div className="span">Categories: </div>
-      <BooksForm />
+  <div className="App-body">
+    <div className="App-container">
+      <div className="container-Header">
+        <span className="logo">Bookstore CMS</span>
+        <span className="spanB">BOOKS</span>
+        <span className="spanC">CATEGORIES</span>
+        <div className="profilePic" />
+      </div>
+      <div className="container-Body">
+        <BooksList />
+        <BooksForm />
+      </div>
     </div>
   </div>
 );

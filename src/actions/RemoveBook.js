@@ -1,5 +1,5 @@
 /* eslint-disable import/prefer-default-export */
-export const removeBook = (book) => ({
+export const removeBook = (id) => ({
   type: 'REMOVE_BOOK',
-  book,
+  id,
 });
