@@ -5,19 +5,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { createBook } from '../actions/createBook';
-
-const bookCategories = [
-  'Action',
-  'Advanture',
-  'History',
-  'Horror',
-  'Sci-Fi',
-  'Romance',
-  'Thriller',
-  'Mystery',
-];
-
-const createID = () => Math.floor((Math.random() * 1000) + 1);
+import { createID } from '../helper/mathID';
+import { bookCategories } from '../helper/categories';
 
 class BooksForm extends React.Component {
   constructor(props) {
@@ -50,18 +39,18 @@ class BooksForm extends React.Component {
       this.setState({
         error: null,
       });
-      event.preventDefault();
-
-      this.props.createBook({
-        id: createID(),
-        title,
-        category,
-      });
-      this.setState({
-        title: '',
-        category: 'Action',
-      });
     }
+    event.preventDefault();
+
+    this.props.createBook({
+      id: createID(),
+      title,
+      category,
+    });
+    this.setState({
+      title: '',
+      category: 'Action',
+    });
   }
 
   render() {
