@@ -1,0 +1,141 @@
+body{
+  background:#e8e9ec;
+}
+.App-body{
+    background-color: #f5f6fa;
+    margin:150px;
+ }
+ .App-container{
+  /* width: 1400px; */
+  height: 1097px;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 var(--black-5);
+  background-color: #fafafa;
+ }
+ .container-Header{
+  width: 1000px;
+  height: 100px;
+  background-color: #ffffff;
+  display: table-cell;
+  vertical-align: middle;
+  border-bottom: 1px solid rgba(0,0,0,0.15)
+}
+.logo{
+  width: 240px;
+  height: 37px;
+  font-family: Montserrat;
+  font-size: 30px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  Letter-spacing: 1px;
+  color: #0290ff;
+  padding-left: 50px;
+  padding-right: 41px;
+  display:inline-block;
+  margin-top: 10px;
+}
+.spanB{
+  width: 59px;
+  height: 16px;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+  padding-right: 41px;
+}
+.spanC{
+  width: 105px;
+  height: 16px;
+  opacity: 0.5;
+  font-family: Montserrat;
+  font-size: 13px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 1.9px;
+  color: #121212;
+}
+
+.column {
+  float: left;
+  width: 23.33%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.profilePic{
+  content:url("../style/profile.jpg");
+  width:30px;
+  height:30px;
+  float:right;
+  border-radius: 30px;
+  margin-top:10px;
+  margin-right: 50px;
+}
+
+.container-Body{
+  margin-top:30px;
+}
+.categoryFilter{
+  margin-left:90px;
+  margin-bottom:5px;
+}
+.categoryFilterBy{
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.categorySelect{
+  font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    color: #333;
+    display: inline-block;
+    position: relative;
+}
+.footerText{
+  margin-left:100px;
+}
+.buttonSecond{
+  width: 184px;
+  height: 45px;
+  border-radius: 3px;
+  background-color: #0290ff;
+}
+.submitTitle{
+  width: 264px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
+.categoryFilterBy{
+  width: 174px;
+  height: 24px;
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: -0.18px;
+  color: #888888;
+}
+.categorySelectSecond{
+  width: 285px;
+  height: 45px;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: #ffffff;
+}
