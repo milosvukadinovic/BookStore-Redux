@@ -36,7 +36,7 @@ Run `npm install`
 
 ## Live version - hosted on Heroku:
 
-[bookstore-redux live version](https://bookstore-redux-milos.herokuapp.com//)
+[bookstore-redux live version](https://bookstore-redux.herokuapp.com/)
 
 
 ## Author
